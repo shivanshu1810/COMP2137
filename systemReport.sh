@@ -11,9 +11,6 @@ OS=$PRETTY_NAME
 Uptime=$(uptime -p)
 CPU=$(lshw -class processor 2>/dev/null | grep 'product:' | head -1 | awk -F: '{print $2}' | xargs)
 RAM=$(free -h | awk '/Mem:/ {print $2}')
-#Disks=$(lsblk -d -o NAME,MODEL,SIZE | tail -n +2 | awk '{printf "%-10s %-20s %s\n", $1, $2, $3}')
-#Disks=$(lshw -short -class -d -o NAME,MODEL,SIZE | tail -n +2 | awk '{printf "%-10s %-20s %s\n",$1,$2,$3}')
-#Disks=$(lshw -short -class disk 2>/dev/null | awk '$2 ~ /disk|sr|nvme/ {printf "%-12s %-6s %-8s %s\n", $2,$3,$4,$5}')
 Disks=$(lshw -short -class disk 2>/dev/null | awk '{print $2, $3, $4, $5}' | column -t)
 Video=$(lshw -C display 2>/dev/null | grep 'product:' | awk -F: '{print $2}' | xargs)
 Gateway=$(ip r | awk '/default/ {print $3}')
@@ -22,14 +19,12 @@ DNS=$(grep "nameserver" /etc/resolv.conf | awk '{print $2}' | paste -sd, -)
 
 Users=$(who | awk '{print $1}' | sort | uniq | paste -sd, -)
 Disk_Space=$(df -h --output=target,avail | tail -n +2 | awk '{print $1 " " $2}')
-#Disk_Space=$(df -h --output=target,avail | tail -n +2 | awk '{print $1 ": " $2}' | paste -sd, -)
 Proc_Count=$(ps -e --no-headers | wc -l)
 Load_Avg=$(uptime | awk -F'load average:' '{print $2}' | xargs)
 Ports=$(ss -tuln | awk 'NR>1 {print $5}' | awk -F: '{print $NF}' | sort -u | paste -sd, -)
 UFW_Status=$(sudo ufw status | head -n 1)
 
 #-----------------------------------------------------------------------------------------
-
 echo ""
 cat <<EOF
 
