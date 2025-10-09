@@ -1,31 +1,37 @@
 
 #!/usr/bash
 
-Hostname=$(hostname)
-Username=$(whoami)
-DateTime=$(date)
+# System Report Script
+# Description: The script generates system summary report
+# By: Shivanshu Sharma
+# Date: October 7,2025
+
+Hostname=$(hostname) # system hostname
+Username=$(whoami) # person currently running script
+DateTime=$(date) # current date/time
 
 source /etc/os-release
 OS=$PRETTY_NAME
 
-Uptime=$(uptime -p)
-CPU=$(lshw -class processor 2>/dev/null | grep 'product:' | head -1 | awk -F: '{print $2}' | xargs)
-RAM=$(free -h | awk '/Mem:/ {print $2}')
-Disks=$(lsblk -d -o NAME,TYPE,SIZE | awk 'NR==1 {next} $2=="disk" {printf "%s: %s (%s)\n", $1, $2, $3}')
-#Disks=$(lshw -short -class disk 2>/dev/null | awk '{print $2, $3, $4, $5}' | column -t)
-Video=$(lshw -C display 2>/dev/null | grep 'product:' | awk -F: '{print $2}' | xargs)
-Gateway=$(ip r | awk '/default/ {print $3}')
-Host_IP=$(ip a | awk '/inet / && !/127.0.0.1/ {print $2}' | cut -d/ -f1 | head -1)
-DNS=$(grep "nameserver" /etc/resolv.conf | awk '{print $2}' | paste -sd, -)
+Uptime=$(uptime -p) #  System uptime
+CPU=$(lshw -class processor 2>/dev/null | grep 'product:' | head -1 | awk -F: '{print $2}' | xargs) # CPU model name 
+RAM=$(free -h | awk '/Mem:/ {print $2}') # Total RAM installed on system
+Disks=$(lsblk -d -o NAME,TYPE,SIZE | awk 'NR==1 {next} $2=="disk" {printf "%s: %s (%s)\n", $1, $2, $3}') # All physical disks with name,type and size
+Video=$(lshw -C display 2>/dev/null | grep 'product:' | awk -F: '{print $2}' | xargs) # Video card in System
+Gateway=$(ip r | awk '/default/ {print $3}') # Default gateway IP
+Host_IP=$(ip a | awk '/inet / && !/127.0.0.1/ {print $2}' | cut -d/ -f1 | head -1) # Primary IP of host 
+DNS=$(grep "nameserver" /etc/resolv.conf | awk '{print $2}' | paste -sd, -) # List of DNS servers
 
-Users=$(who | awk '{print $1}' | sort | uniq | paste -sd, -)
-Disk_Space=$(df -h --output=target,avail | tail -n +2 | awk '{print $1 " " $2}')
-Proc_Count=$(ps -e --no-headers | wc -l)
-Load_Avg=$(uptime | awk -F'load average:' '{print $2}' | xargs)
-Ports=$(ss -tuln | awk 'NR>1 {print $5}' | awk -F: '{print $NF}' | sort -u | paste -sd, -)
-UFW_Status=$(sudo ufw status | head -n 1)
+Users=$(who | awk '{print $1}' | sort | uniq | paste -sd, -) # Users who are currently logged in
+Disk_Space=$(df -h --output=target,avail | tail -n +2 | awk '{print $1 " " $2}') # Availble disk space
+Proc_Count=$(ps -e --no-headers | wc -l) # Number of active running process
+Load_Avg=$(uptime | awk -F'load average:' '{print $2}' | xargs) #system load average in 1,5 and 15 minutes timeframe
+Ports=$(ss -tuln | awk 'NR>1 {print $5}' | awk -F: '{print $NF}' | sort -u | paste -sd, -) # All open TCP and UDP ports
+UFW_Status=$(sudo ufw status | head -n 1) # Current status of firewall
 
 #-----------------------------------------------------------------------------------------
+# Output needed as per assignment
+
 echo ""
 cat <<EOF
 
