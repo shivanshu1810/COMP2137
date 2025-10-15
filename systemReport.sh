@@ -2,7 +2,8 @@
 #!/usr/bash
 
 # System Report Script
-# Description: The script generates system summary report
+# Description:  This script generates a comprehensive System Summary Report that provides detailed
+#               information about the host machine’s hardware, operating system, and network settings.
 # By: Shivanshu Sharma
 # Date: October 7,2025
 
@@ -23,7 +24,10 @@ Host_IP=$(ip a | awk '/inet / && !/127.0.0.1/ {print $2}' | cut -d/ -f1 | head -
 DNS=$(grep "nameserver" /etc/resolv.conf | awk '{print $2}' | paste -sd, -) # List of DNS servers
 
 Users=$(who | awk '{print $1}' | sort | uniq | paste -sd, -) # Users who are currently logged in
-Disk_Space=$(df -h --output=target,avail | tail -n +2 | awk '{print $1 " " $2}') # Availble disk space
+Disk_Space=$(df -h --output=target,avail -x tmpfs -x devtmpfs -x squashfs \
+  | tail -n +2 \
+  | awk '$2!="0" && $2!="0B" {print $1 " " $2}')
+ # Availble disk space
 Proc_Count=$(ps -e --no-headers | wc -l) # Number of active running process
 Load_Avg=$(uptime | awk -F'load average:' '{print $2}' | xargs) #system load average in 1,5 and 15 minutes timeframe
 Ports=$(ss -tuln | awk 'NR>1 {print $5}' | awk -F: '{print $NF}' | sort -u | paste -sd, -) # All open TCP and UDP ports
