@@ -24,9 +24,12 @@ Host_IP=$(ip a | awk '/inet / && !/127.0.0.1/ {print $2}' | cut -d/ -f1 | head -
 DNS=$(grep "nameserver" /etc/resolv.conf | awk '{print $2}' | paste -sd, -) # List of DNS servers
 
 Users=$(who | awk '{print $1}' | sort | uniq | paste -sd, -) # Users who are currently logged in
-Disk_Space=$(df -h --output=target,avail -x tmpfs -x devtmpfs -x squashfs \
-  | tail -n +2 \
-  | awk '$2!="0" && $2!="0B" {print $1 " " $2}')
+Disk_Space=$(df -m | awk '$6 == "/" {print "Located at " $6 ", Mem Av: " $4 " MB"}')
+
+#Disk_Space=$(df -m | grep /dev/sda | awk '{print "Located at ", $6,"Mem Av, "$4,"Mb"}')
+#Disk_Space=$(df -h --output=target,avail -x tmpfs -x devtmpfs -x squashfs \ 
+# | tail -n +2 \ 
+# | awk '$2!="0" && $2!="0B" {print $1 " " $2}')
  # Availble disk space
 Proc_Count=$(ps -e --no-headers | wc -l) # Number of active running process
 Load_Avg=$(uptime | awk -F'load average:' '{print $2}' | xargs) #system load average in 1,5 and 15 minutes timeframe
