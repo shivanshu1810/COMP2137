@@ -1,6 +1,6 @@
 ---Host/Student info----
 
-Running on Thu Nov 13 06:09:08 AM IST 2025
+Running on Thu Nov 13 06:11:09 AM IST 2025
 Run by shiv - () on host
  Static hostname: generic-vm
       Machine ID: 7af3b69a021c4173891cb23ae97c227b
@@ -19,9 +19,9 @@ Network mgmt deleted
 Network lan created
 Network mgmt created
 Launching openwrt
-Retrieving image: Unpack: 100% (1.46GB/s)                                          Retrieving image: Unpack: 100% (1.46GB/s)                                          Launching server1
-Retrieving image: Unpack: 100% (1.62GB/s)                                          Retrieving image: Unpack: 100% (1.62GB/s)                                          inactive
-Pushing /home/shiv/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (179.63MB/s)                                                                                                   Waiting for server1 restart
+Retrieving image: Unpack: 100% (2.47GB/s)                                          Retrieving image: Unpack: 100% (2.47GB/s)                                          Launching server1
+Retrieving image: Unpack: 100% (1.58GB/s)                                          Retrieving image: Unpack: 100% (1.58GB/s)                                          inactive
+Pushing /home/shiv/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (81.44MB/s)                                                                                                  Waiting for server1 restart
 # Host server1-mgmt found: line 5
 # Host server1-mgmt found: line 6
 # Host server1-mgmt found: line 7
@@ -31,6 +31,6 @@ Original contents retained as /home/shiv/.ssh/known_hosts.old
 Retrieved assignment2 script
 Copied assignment2.sh script to server1
 ---assignment2.sh run----
-[INFO] Starting assignment2.sh — backups will be in /var/backups/assignment2-backups-20251113-004007
+[INFO] Starting assignment2.sh — backups will be in /var/backups/assignment2-backups-20251113-004211
 [ OK ] Found interface with 192.168.16.*: eth0
 [ERR ] No netplan file found at /etc/netplan/50-cloud-init.yaml
