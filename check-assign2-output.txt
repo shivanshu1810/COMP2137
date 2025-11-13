@@ -1,0 +1,38 @@
+---Host/Student info----
+
+Running on Thu Nov 13 05:53:20 AM IST 2025
+Run by shiv - () on host
+ Static hostname: generic-vm
+      Machine ID: 7af3b69a021c4173891cb23ae97c227b
+Operating System: Ubuntu 24.04.3 LTS
+a98742121b14ebe6350c4bf8245d0062  ./check-assign2-script.sh - a98742121b14ebe6350c4bf8245d0062  -
+------------------------
+
+---Start of Assignment2.sh Check------
+Retrieved makecontainers.sh script
+---Running makecontainers.sh----------
+Retrieving script library file
+This script performs many tasks. Please be patient
+To see more about what it is doing as it does it, use the --verbose option
+You may ignore any messages about Open vSwitch or dpkg-preconfigure being unable to re-open stdin
+DO NOT use control-Z when this script is running.
+Network lan deleted
+Network mgmt deleted
+Network lan created
+Network mgmt created
+Launching openwrt
+Retrieving image: Unpack: 100% (1.28GB/s)                                          Retrieving image: Unpack: 100% (1.28GB/s)                                          Launching server1
+Retrieving image: Unpack: 100% (1.59GB/s)                                          Retrieving image: Unpack: 100% (1.59GB/s)                                          Pushing /home/shiv/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (171.99MB/s)                                                                                                   Waiting for server1 restart
+please let the script finish
+# Host server1-mgmt found: line 4
+# Host server1-mgmt found: line 5
+# Host server1-mgmt found: line 6
+/home/shiv/.ssh/known_hosts updated.
+Original contents retained as /home/shiv/.ssh/known_hosts.old
+---Retrieving assignment2.sh script---
+Retrieved assignment2 script
+Copied assignment2.sh script to server1
+---assignment2.sh run----
+[INFO] Starting assignment2.sh — backups will be in /var/backups/assignment2-backups-20251113-002508
+[ OK ] Found interface with 192.168.16.*: eth0
+[ERR ] No netplan file found at /etc/netplan/50-cloud-init.yaml
