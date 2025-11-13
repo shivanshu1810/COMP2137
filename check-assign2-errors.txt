@@ -2,5 +2,10 @@ Warning: The unit file, source configuration file or drop-ins of netplan-ovs-cle
 WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
 dpkg-preconfigure: unable to re-open stdin: No such file or directory
 Warning: Permanently added 'server1-mgmt' (ED25519) to the list of known hosts.
-/home/remoteadmin/assignment2.sh: line 7: syntax error near unexpected token `newline'
-/home/remoteadmin/assignment2.sh: line 7: `<!DOCTYPE html>'
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+E: The repository 'http://old-releases.ubuntu.com/ubuntu jammy Release' does not have a Release file.
+E: The repository 'http://old-releases.ubuntu.com/ubuntu jammy-updates Release' does not have a Release file.
+E: The repository 'http://old-releases.ubuntu.com/ubuntu jammy-security Release' does not have a Release file.
+[[31mERR [0m] Failed to install package apache2. Check package source/connectivity.

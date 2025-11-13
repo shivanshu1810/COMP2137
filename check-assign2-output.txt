@@ -1,6 +1,6 @@
 ---Host/Student info----
 
-Running on Thu Nov 13 07:13:36 AM IST 2025
+Running on Thu Nov 13 07:20:46 AM IST 2025
 Run by shiv - () on host
  Static hostname: generic-vm
       Machine ID: 7af3b69a021c4173891cb23ae97c227b
@@ -19,9 +19,11 @@ Network mgmt deleted
 Network lan created
 Network mgmt created
 Launching openwrt
-Retrieving image: Unpack: 100% (1.73GB/s)                                          Retrieving image: Unpack: 100% (1.73GB/s)                                          Launching server1
-Retrieving image: Unpack: 100% (1.62GB/s)                                          Retrieving image: Unpack: 100% (1.62GB/s)                                          inactive
-Pushing /home/shiv/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (378.91MB/s)                                                                                                   Waiting for server1 restart
+Retrieving image: Unpack: 100% (1.05GB/s)                                          Retrieving image: Unpack: 100% (1.05GB/s)                                          Launching server1
+Retrieving image: Unpack: 100% (1.18GB/s)                                          Retrieving image: Unpack: 100% (1.18GB/s)                                          inactive
+Pushing /home/shiv/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (316.99MB/s)                                                                                                   Waiting for server1 restart
+please let the script finish
+please let the script finish
 # Host server1-mgmt found: line 5
 # Host server1-mgmt found: line 6
 # Host server1-mgmt found: line 7
@@ -31,3 +33,33 @@ Original contents retained as /home/shiv/.ssh/known_hosts.old
 Retrieved assignment2 script
 Copied assignment2.sh script to server1
 ---assignment2.sh run----
+[[36mINFO[0m] Starting assignment2.sh — backups will be in /var/backups/assignment2-backups-20251113-015211
+[[36mINFO[0m] --- 1. Detecting Interface ---
+[[32m OK [0m] Target interface identified: eth0
+[[36mINFO[0m] --- 2. Configuring Netplan ---
+[[32m OK [0m] Identified Netplan configuration file: /etc/netplan/10-lxc.yaml
+[[36mINFO[0m] Configuration mismatch detected. Updating Netplan to include DNS.
+[[32m OK [0m] Backed up /etc/netplan/10-lxc.yaml to /var/backups/assignment2-backups-20251113-015211
+[[32m OK [0m] Wrote clean Netplan configuration (including DNS) to /etc/netplan/10-lxc.yaml
+[[36mINFO[0m] Applying Netplan configuration (accept changes if prompted)...
+Do you want to keep these settings?
+
+
+Press ENTER before the timeout to accept the new configuration
+
+
+Changes will revert in 15 secondsChanges will revert in 14 secondsChanges will revert in 13 secondsChanges will revert in 12 secondsChanges will revert in 11 secondsChanges will revert in 10 secondsChanges will revert in  9 secondsChanges will revert in  8 secondsChanges will revert in  7 secondsChanges will revert in  6 secondsChanges will revert in  5 secondsChanges will revert in  4 secondsChanges will revert in  3 secondsChanges will revert in  2 secondsChanges will revert in  1 seconds
+Reverting.
+[[32m OK [0m] Network configuration applied successfully.
+[[36mINFO[0m] --- 3. Updating /etc/hosts ---
+[[36mINFO[0m] Removing old hostname entries for server1...
+[[32m OK [0m] New /etc/hosts entry added: 192.168.16.21	server1.
+[[36mINFO[0m] --- 4. Installing and Starting Required Software ---
+[[36mINFO[0m] Checking /etc/apt/sources.list for repository validity.
+[[36mINFO[0m] Ubuntu Jammy detected. Overwriting sources.list with clean 'old-releases' mirror to resolve repository errors.
+[[32m OK [0m] Backed up /etc/apt/sources.list to /var/backups/assignment2-backups-20251113-015211
+[[32m OK [0m] Repository sources completely overwritten with clean old-releases configuration.
+[[36mINFO[0m] Running final apt clean and update...
+[[32m OK [0m] APT cache cleaned successfully.
+[[33mWARN[0m] 'apt update' reported non-fatal issues (often harmless warnings). Continuing installation attempts.
+[[36mINFO[0m] Installing required package: apache2...
