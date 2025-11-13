@@ -1,19 +1,4 @@
---2025-11-13 05:53:21--  https://github.com/zonzorp/COMP2137/raw/main/makecontainers.sh
-Resolving github.com (github.com)... 140.82.112.4
-Connecting to github.com (github.com)|140.82.112.4|:443... connected.
-HTTP request sent, awaiting response... 302 Found
-Location: https://raw.githubusercontent.com/zonzorp/COMP2137/main/makecontainers.sh [following]
---2025-11-13 05:53:21--  https://raw.githubusercontent.com/zonzorp/COMP2137/main/makecontainers.sh
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 15594 (15K) [text/plain]
-Saving to: ‘/home/shiv/makecontainers.sh’
-
-     0K .......... .....                                      100% 1.22M=0.01s
-
-2025-11-13 05:53:21 (1.22 MB/s) - ‘/home/shiv/makecontainers.sh’ saved [15594/15594]
-
+Warning: The unit file, source configuration file or drop-ins of netplan-ovs-cleanup.service changed on disk. Run 'systemctl daemon-reload' to reload units.
 WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
 dpkg-preconfigure: unable to re-open stdin: No such file or directory
 Warning: Permanently added 'server1-mgmt' (ED25519) to the list of known hosts.
