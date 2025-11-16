@@ -204,7 +204,7 @@ fi
 
 # Update package lists
 if ! apt-get update -qq; then
-    log WARN "'apt update' reported non-fatal issues (often harmless warnings). Continuing installation attempts."
+    log WARN "'apt update' reported harmless issues. Continuing installation attempts."
 fi
 
 # Step 4c: Loop through and ensure packages
@@ -279,4 +279,4 @@ for user in "${USERS[@]}"; do
     fi
 done
 
-log SUCCESS "Assignment2 configuration complete! The server is fully configured."
+log SUCCESS "Assignment2 configuration complete. The server is fully configured."
