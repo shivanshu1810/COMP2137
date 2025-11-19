@@ -1,11 +1,44 @@
-Warning: The unit file, source configuration file or drop-ins of netplan-ovs-cleanup.service changed on disk. Run 'systemctl daemon-reload' to reload units.
 WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
 dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Host server1-mgmt not found in /home/shiv/.ssh/known_hosts
 Warning: Permanently added 'server1-mgmt' (ED25519) to the list of known hosts.
 WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 33.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Synchronizing state of squid.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable squid
 WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+Error: Command not found
+Error: Command not found
 WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
-E: The repository 'http://old-releases.ubuntu.com/ubuntu jammy Release' does not have a Release file.
-E: The repository 'http://old-releases.ubuntu.com/ubuntu jammy-updates Release' does not have a Release file.
-E: The repository 'http://old-releases.ubuntu.com/ubuntu jammy-security Release' does not have a Release file.
-[[31mERR [0m] Failed to install package apache2. Check package source/connectivity.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+Synchronizing state of squid.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable squid
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
